@@ -18,6 +18,7 @@ import LegalReviewStatus from './components/LegalReviewStatus.jsx';
 import IPStatusDetail from './components/IPStatusDetail.jsx';
 import SellProduct from './components/SellProduct.jsx';
 import ContactIPExperts from './components/ContactIPExperts.jsx';
+import ProfileInformation from './components/ProfileInformation.jsx';
 import AnimatedWave from './components/AnimatedWave.jsx';
 import { UserProvider } from './context/UserContext.jsx';
 import { IPProvider } from './context/IPContext.jsx';
@@ -65,6 +66,7 @@ function App() {
               <Route path="/sell-product" element={<SellProduct />} />
               <Route path="/contact-ip-experts/:ipId" element={<ContactIPExperts />} />
               <Route path="/schedule-consultation" element={<ScheduleConsultation />} />
+              <Route path="/profile" element={<ProfileInformation />} />
             </Routes>
           </Layout>
         </Router>

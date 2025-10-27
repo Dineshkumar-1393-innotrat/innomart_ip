@@ -53,6 +53,8 @@ function IPSubmissionStep3() {
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full w-full"></div>
             </div>
+                        <p className=" w-full text-sm sm:text-base text-gray-800">provide the commercialization details about your intellectual property assets</p>
+
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>

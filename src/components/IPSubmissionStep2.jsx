@@ -51,6 +51,8 @@ function IPSubmissionStep2() {
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full w-2/3"></div>
             </div>
+                          <p>provide the technical details about your intellectual property assets</p>
+
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>

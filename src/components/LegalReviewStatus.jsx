@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar.jsx';
 
 const mockIPs = Array.from({ length: 12 }).map((_, index) => ({
   id: index + 1,
@@ -17,8 +18,10 @@ function LegalReviewStatus() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4 sm:p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <Navbar title="IP Legal Review Status" />
+
+      <div className="max-w-6xl mx-auto p-4 sm:p-6">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center text-gray-600 hover:text-gray-800 mb-6 sm:mb-8 text-sm sm:text-base"
