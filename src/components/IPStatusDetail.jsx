@@ -43,12 +43,12 @@ function IPStatusDetail() {
           >
             &larr; Back
           </button>
-          <button
+          {/* <button
             onClick={() => navigate(`/contact-ip-experts/${ipId}`)}
             className="px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"
           >
             Contact IP Experts
-          </button>
+          </button> */}
         </div>
 
         <div className="mb-8">

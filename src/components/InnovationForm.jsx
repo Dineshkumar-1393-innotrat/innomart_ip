@@ -88,11 +88,18 @@
 
 // export default InnovationForm;
 
-
-// responsive innovation form component
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const InnovationForm = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can add any form submission logic here if needed before redirection
+    navigate("/expert-consultation");
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center py-6 px-2 sm:px-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-6xl flex flex-col md:flex-row overflow-hidden">
@@ -107,7 +114,10 @@ const InnovationForm = () => {
         </div>
 
         {/* Form Section */}
-        <form className="w-full md:w-1/2 p-5 sm:p-7 space-y-4 flex flex-col justify-center">
+        <form
+          className="w-full md:w-1/2 p-5 sm:p-7 space-y-4 flex flex-col justify-center"
+          onSubmit={handleSubmit}
+        >
           <div>
             <label className="block text-gray-700 font-bold mb-1 text-sm">
               Innovation Title <span className="text-red-500">*</span>
