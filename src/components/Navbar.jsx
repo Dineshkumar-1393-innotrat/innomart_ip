@@ -40,13 +40,24 @@ function Navbar({ title }) {
           <img
             src={logo}
             alt="Innomart Logo"
-            className="w-20 h-20 object-contain"
+            className="h-16 w-auto object-contain"
           />
         </div>
 
-        {/* Title (optional, hidden on small screens) */}
-        <div className="text-sm sm:text-base text-gray-500 hidden md:block">
-          {title}
+        {/* Navigation Buttons */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          <button
+            onClick={() => navigate("/legal-review-status")}
+            className="px-4 sm:px-6 py-2 text-sm sm:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+          >
+            IP Legal Reviews
+          </button>
+          <button
+            onClick={() => navigate("/services")}
+            className="px-4 sm:px-6 py-2 text-sm sm:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+          >
+            Services
+          </button>
         </div>
 
         {/* Notifications and Profile */}

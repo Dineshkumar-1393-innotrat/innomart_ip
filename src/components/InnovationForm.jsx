@@ -90,6 +90,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Upload } from "lucide-react";
 
 const InnovationForm = () => {
   const navigate = useNavigate();
@@ -101,90 +102,87 @@ const InnovationForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-6 px-2 sm:px-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-6xl flex flex-col md:flex-row overflow-hidden">
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 flex-shrink-0 flex items-center justify-center bg-gray-50">
-          <img
-            src="/image.jpg" // Make sure this matches your public file!
-            alt="Consulting"
-            className="object-cover w-full h-56 md:h-full"
-            style={{ minHeight: "150px" }}
+    <form
+      className="w-full space-y-5 flex flex-col"
+      onSubmit={handleSubmit}
+    >
+      {/* Innovation Title */}
+      <div>
+        <label className="block text-gray-800 font-semibold mb-2 text-sm ">
+          Innovation Title <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter the name of your innovation"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all hover:border-gray-400"
+          required
+        />
+      </div>
+      
+      {/* Innovation Description */}
+      <div>
+        <label className="block text-gray-800 font-semibold mb-2 text-sm">
+          Innovation Description <span className="text-red-500">*</span>
+        </label>
+        <textarea
+          placeholder="Describe your innovation in detail..."
+          rows={4}
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none hover:border-gray-400"
+          required
+        />
+      </div>
+      
+      {/* Upload Documents */}
+      <div>
+        <label className="block text-gray-800 font-semibold mb-2 text-sm">
+          Upload Supportive Documents <span className="text-red-500">*</span>
+        </label>
+        <div className="relative">
+          <input
+            type="file"
+            accept=".jpg,.jpeg,.png,.pdf"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all cursor-pointer hover:border-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            required
           />
         </div>
-
-        {/* Form Section */}
-        <form
-          className="w-full md:w-1/2 p-5 sm:p-7 space-y-4 flex flex-col justify-center"
-          onSubmit={handleSubmit}
-        >
-          <div>
-            <label className="block text-gray-700 font-bold mb-1 text-sm">
-              Innovation Title <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Name Of Your Innovations"
-              className="w-full border rounded px-3 py-2 text-sm focus:outline-none"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-bold mb-1 text-sm">
-              Innovation Description <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              placeholder="Describe Your Innovations"
-              rows={3}
-              className="w-full border rounded px-3 py-2 text-sm focus:outline-none"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-bold mb-1 text-sm">
-              Upload Supportive Documents <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="file"
-              accept=".jpg,.pdf"
-              className="w-full border rounded px-3 py-2 text-sm focus:outline-none"
-              required
-            />
-            <p className="text-xs text-gray-400 mt-1">
-              Select File – Jpg, Pdf Not Exceeding 5MB
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <div className="flex-1">
-              <label className="block text-gray-700 font-bold mb-1 text-sm">
-                Schedule Date <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="date"
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none"
-                required
-              />
-            </div>
-            <div className="flex-1">
-              <label className="block text-gray-700 font-bold mb-1 text-sm">
-                Schedule Time <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="time"
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none"
-                required
-              />
-            </div>
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-800 text-white font-bold py-2 px-4 rounded hover:bg-blue-900 w-full text-sm sm:text-base"
-          >
-            Talk To Our Experts
-          </button>
-        </form>
+        <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
+          <Upload className="w-3 h-3" />
+          Supported formats: JPG, PNG, PDF (Max 5MB)
+        </p>
       </div>
-    </div>
+      
+      {/* Schedule Date & Time */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-gray-800 font-semibold mb-2 text-sm">
+            Schedule Date <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="date"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all hover:border-gray-400"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-800 font-semibold mb-2 text-sm">
+            Schedule Time <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="time"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all hover:border-gray-400"
+            required
+          />
+        </div>
+      </div>
+      
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg text-base mt-2"
+      >
+        Talk To Our Experts
+      </button>
+    </form>
   );
 };
 
