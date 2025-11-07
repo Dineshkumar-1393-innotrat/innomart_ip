@@ -64,6 +64,7 @@ function App() {
               <Route path="/legal-review-status" element={<LegalReviewStatus />} />
               <Route path="/legal-review-status/:ipId" element={<IPStatusDetail />} />
               <Route path="/sell-product" element={<SellProduct />} />
+              <Route path="/contact-ip-experts" element={<ContactIPExperts />} />
               <Route path="/contact-ip-experts/:ipId" element={<ContactIPExperts />} />
               <Route path="/schedule-consultation" element={<ScheduleConsultation />} />
               <Route path="/profile" element={<ProfileInformation />} />

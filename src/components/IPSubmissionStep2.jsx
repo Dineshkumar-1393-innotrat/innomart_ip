@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useIP } from '../context/IPContext.jsx';
 import { ArrowLeft, ArrowRight, FileText, Upload } from 'lucide-react';
+import homepageImage from '../assets/homepage-image.png';
 
 function IPSubmissionStep2() {
   const navigate = useNavigate();
@@ -34,8 +35,24 @@ function IPSubmissionStep2() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
-      <div ref={formRef} className="max-w-2xl mx-auto py-12">
+    <div className="min-h-screen relative overflow-hidden p-4">
+      {/* Background Image with Low Opacity */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `url(${homepageImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.15
+        }}
+      />
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-purple-50/80"></div>
+      
+      {/* Content */}
+      <div ref={formRef} className="relative z-10 max-w-2xl mx-auto py-12">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center text-gray-600 hover:text-gray-800 mb-8"
