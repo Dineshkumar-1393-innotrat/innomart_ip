@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useUser } from '../context/UserContext.jsx';
 import { ArrowLeft, Mail, Lock, User, Building } from 'lucide-react';
+import signupImage from '../assets/Signup.png';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -65,7 +66,21 @@ function SignUp() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-purple-50">
-      <div ref={formRef} className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-md">
+      <div className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-2xl max-w-5xl w-full overflow-hidden">
+        
+        {/* Signup Image */}
+        <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 p-12">
+          <div className="w-full max-w-md">
+            <img 
+              src={signupImage} 
+              alt="Sign Up Illustration" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Form Section */}
+        <div ref={formRef} className="w-full lg:w-1/2 p-6 sm:p-8">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center text-gray-600 hover:text-gray-800 mb-4 sm:mb-6 text-sm sm:text-base"
@@ -112,6 +127,7 @@ function SignUp() {
             <p className="text-sm text-gray-600">
                 Already Have An Account? <a href="/login" onClick={(e) => {e.preventDefault(); navigate('/login')}} className="text-blue-600 font-semibold hover:underline">Login</a>
             </p>
+        </div>
         </div>
       </div>
     </div>

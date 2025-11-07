@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import loginImage from '../assets/Login.png';
 
-// You can replace this with an actual illustration component or an <img> tag
+// Login illustration with actual image
 const LoginIllustration = () => (
-  <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gray-100 p-12">
-    {/* Placeholder for illustration - you can use an SVG or an image here */}
-    <div className="w-full max-w-sm">
-        <p className='text-center'>Login Illustration</p>
+  <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 p-12">
+    <div className="w-full max-w-md">
+      <img 
+        src={loginImage} 
+        alt="Login Illustration" 
+        className="w-full h-auto object-contain"
+      />
     </div>
   </div>
 );
