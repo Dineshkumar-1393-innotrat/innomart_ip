@@ -186,8 +186,7 @@ function GoalSelection() {
             What's Your Goal?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">
-            Choose how you'd like to monetize your intellectual property
-          </p>
+choose the option which fits your goal ?          </p>
         </div>
 
         <div className="space-y-4 sm:space-y-6">

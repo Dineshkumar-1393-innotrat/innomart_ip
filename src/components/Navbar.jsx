@@ -52,12 +52,12 @@ function Navbar({ title }) {
           >
             IP Legal Reviews
           </button>
-          <button
+          {/* <button
             onClick={() => navigate("/services")}
             className="px-4 sm:px-6 py-2 text-sm sm:text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
           >
             Services
-          </button>
+          </button> */}
         </div>
 
         {/* Notifications and Profile */}

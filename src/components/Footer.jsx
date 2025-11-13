@@ -32,12 +32,12 @@ function Footer() {
           <div>
             <h3 className="text-white font-bold text-base mb-4 border-b-2 border-blue-400 inline-block pb-2">Quick Links</h3>
             <ul className="space-y-2.5">
-              <li>
+              {/* <li>
                 <a href="/services" className="text-sm hover:text-blue-300 transition-colors duration-200 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 group-hover:w-3 transition-all"></span>
                   Our Services
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/legal-review-status" className="text-sm hover:text-blue-300 transition-colors duration-200 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 group-hover:w-3 transition-all"></span>
@@ -72,9 +72,9 @@ function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 text-blue-300 flex-shrink-0" />
                 <div className="text-sm">
-                  <a href="mailto:Sanjana@innotrat.in" className="hover:text-blue-300 transition-colors duration-200 block">
+                  {/* <a href="mailto:Sanjana@innotrat.in" className="hover:text-blue-300 transition-colors duration-200 block">
                     Sanjana@innotrat.in
-                  </a>
+                  </a> */}
                   <a href="mailto:Sravya@innotrat.in" className="hover:text-blue-300 transition-colors duration-200 block">
                     Sravya@innotrat.in
                   </a>
@@ -84,7 +84,7 @@ function Footer() {
 
             {/* Social Links */}
             <div className="mt-6">
-              <h4 className="text-white font-semibold text-sm mb-3">Follow Us</h4>
+              <h4 className="text-white font-semibold text-sm mb-3 ">Follow Us</h4>
               <div className="flex items-center gap-3 flex-wrap">
                 <div className="relative group">
                   <a 
@@ -161,10 +161,10 @@ function Footer() {
               © {new Date().getFullYear()} InnoMART. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="/privacy" className="text-gray-300 hover:text-blue-300 transition-colors duration-200">
+              <a href="/PrivacyPolicy" className="text-gray-300 hover:text-blue-300 transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-gray-300 hover:text-blue-300 transition-colors duration-200">
+              <a href="/TermsAndConditions" className="text-gray-300 hover:text-blue-300 transition-colors duration-200">
                 Terms of Service
               </a>
             </div>
