@@ -105,6 +105,7 @@ import TermsAndConditions from './components/TermsandConditions.jsx';
 import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import { UserProvider } from './context/UserContext.jsx';
 import { IPProvider } from './context/IPContext.jsx';
+import IPPreview from './components/IPPreview.jsx';
 import './App.css';
 
 const Layout = ({ children }) => {
@@ -152,6 +153,7 @@ function App() {
               <Route path="/schedule-consultation" element={<ScheduleConsultation />} />
               <Route path="/profile" element={<ProfileInformation />} />
               {/* FIXED: Proper closing tag and lowercase path */}
+              <Route path="/ip-preview/:ipId" element={<IPPreview />} />
               <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
               <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
          </Routes>

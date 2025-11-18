@@ -366,8 +366,8 @@ function HomeScreen() {
       <section className="bg-gradient-to-r from-blue-50 to-purple-50 py-16 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12">
           {/* Left Side - Image */}
-          <div className="w-full md:w-5/12 flex items-center justify-center">
-            <div className="relative w-full max-w-sm overflow-hidden rounded-2xl">
+          <div className="w-full  md:w-5/12 flex items-center justify-center">
+            <div className="relative w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl">
               <img 
                 ref={expertsImageRef}
                 src={expertsImage} 
@@ -383,10 +383,19 @@ function HomeScreen() {
           {/* Right Side - Content & Form */}
           <div className="w-full md:w-7/12 flex flex-col">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-center md:text-left">
-              Unlock Your Idea's True Value. From Evaluation To Sale.
+             "Upload Your IP, Consult an Expert, Unlock Its Value."
             </h2>
-            <p className="text-gray-600 mb-6 text-sm leading-relaxed text-center md:text-left">
-              We provide the  pathway to monetize your intellectual property. Leverage our unique dual-assessment platform—combining cutting-edge AI analysis with verified legal expertise.
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-6 leading-relaxed text-center md:text-left">
+              <span className="block text-gray-800 font-medium">
+                We provide the pathway to monetize your intellectual property.
+              </span>
+              <span className="block mt-1">
+                Leverage our unique dual-assessment platform  <span />
+                <span />
+                <span className="font-semibold text-blue-600"> cutting-edge AI analysis </span>
+                with
+                <span className="font-semibold text-purple-600"> verified legal expertise</span>.
+              </span>
             </p>
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <InnovationForm />
