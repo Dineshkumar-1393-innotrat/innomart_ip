@@ -7,7 +7,7 @@ function ContactIPExperts() {
 
   const handleBookAppointment = () => {
     // redirect to expert consultation page
-    navigate('/expert-consultation');
+    navigate('/schedule-consultation');
   };
 
   // 9 dummy experts, each with an avatar image

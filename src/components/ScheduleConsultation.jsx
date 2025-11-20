@@ -43,7 +43,7 @@ function ScheduleConsultation() {
       duration: 0.5,
       onComplete: () => {
         alert('Your consultation has been scheduled!');
-        navigate('/home');
+        navigate('/payment');
       }
     });
   };
